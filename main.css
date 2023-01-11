@@ -1,0 +1,133 @@
+html{ 
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff;
+    font-size: 12pt;
+    font-family: Helvetica, sans-serif;
+    line-height: 150%;
+    color: #222;
+}
+
+#holder {
+    top: 0; left: 0; position: absolute;
+    width: 100%; height: auto;
+}
+
+header {
+    background: url('https://content.codecademy.com/courses/freelance-1/unit-2/pattern.jpeg') center;
+    background-size: cover;
+}
+
+header h1 {
+    color: khaki;
+    font-size: 100px;
+    text-align: center;
+    padding: 1.5em 0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar {
+    background: #58585f;
+    color: #fff;
+    padding: 0.5em;
+    text-align: center;
+    font-size: 22px;
+}
+
+.navbar .nav-item {
+    display: inline-block;
+}
+
+.navbar .nav-item a {
+    font-weight: bold;
+    color: #fff; 
+}
+
+.navbar .nav-item:not(:last-child)::after {
+    content: "     •     ";
+}
+
+h1, h2, h3 {
+    line-height: 1;
+    font-weight: bold;
+}
+
+div.flex { display: flex; }
+
+h2 {
+    font-size: 32px; 
+    color: #fff;
+    padding: 0.5em;
+}
+
+h2#brushes {
+    background-color: mediumspringgreen;
+}
+
+h2#frames { 
+    background-color: lightcoral;
+}
+
+h2#paint {
+    background-color: skyblue;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+main {
+    width: 70%; 
+    margin: 0 auto;
+}
+
+section img {
+    margin: 1em;
+    align-self: center;
+}
+
+.descholder {
+    padding: 1em;
+    width: 100%;
+    position: relative;
+}
+
+.prices {
+    font-weight: bold; color: blue; text-align: right;
+    font-size: 18px;
+    background-image: linear-gradient(90deg, transparent 40%, rgba(0, 0, 255, 0.25) 100%);
+    bottom: 0; right: 0; position: absolute;
+    width: 100%;
+    padding: 1em;
+}
+
+p { padding: 1em 0; }
+
+footer {
+    background: #58585f;
+    color: #fff;
+    padding: 1em;
+    text-align: right;
+}
+
+b, strong { font-weight: bold; }
+
+.showsm{ display: none; }
+
+@media screen and (max-width: 1150px){
+    .showsm { display: block; }
+    h1 { line-height: 50%; }
+}
+
+@media screen and (max-width: 992px) {
+    #content { width: 100%; }
+    header { height: 50vh; position: relative; }
+    header h1 { font-size: 50px; line-height: 50%; top: 40%; position: absolute; margin: 0; padding: 0; width: 100%; }
+    .navbar .nav-item:not(:last-child)::after { content: "  •  "; }
+    main{ width: 100%; }
+    .descholder { padding-bottom: 3em; }
+    .flex{ flex-direction: column; }
+    .flex img{ width: auto; }
+}
